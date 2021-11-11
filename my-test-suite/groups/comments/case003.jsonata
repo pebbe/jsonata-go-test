@@ -1,0 +1,18 @@
+
+(
+  $my_sqrt := function($n) {(
+
+    $good_enough := function($guess) {
+      $abs($guess * $guess - $n) < 0.000000000001
+    };
+    $improve_guess := function($guess) {
+      ($guess + $n / $guess) / 2
+    };
+
+    $sqrt_iter := function($guess) {
+      $good_enough($guess) ? $guess : $sqrt_iter($improve_guess($guess))
+    };
+    $n >= 0 ? $sqrt_iter(1) : "no complex numbers today"
+  )};
+  $my_sqrt($$)
+)

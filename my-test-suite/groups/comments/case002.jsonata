@@ -1,0 +1,2 @@
+$substring('Hello, world', 0 , 5)
+/* trailing comment - no closing tag should trigger an error
